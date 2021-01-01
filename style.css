@@ -1,0 +1,80 @@
+/*global tag*/
+*{
+    text-align:center;
+    background-color:rgb(213, 218, 224);
+}
+
+/*for our div with the id content*/
+#content{
+    width: 650px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4rem;
+    
+}
+p{
+    padding-bottom: 1rem;
+}
+/*for all buttons*/
+button {
+    background-color: #002366; /* traditional royal blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-top: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+/*When you're holding over a button*/
+button:hover{
+    background-color:#053183; 
+    border: none;
+    color: rgb(214, 213, 213);
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  /*for all inputs*/
+input{
+    background-color: #002366;   /*traditional royal blue */
+    border: none;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+}
+
+textarea{
+    background-color: #002366;   /*traditional royal blue */
+    border: none;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 130px;
+    width: 100%;
+}
+/*this one takes away the buttons that usually appears on the right of the input.*/
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  label{
+    font-size: 2rem;
+}  
