@@ -9,13 +9,17 @@
     <div id="content">
       <h1 id="webhook-fun">Webhook example</h1>
       <p>Made by SweDark as a discord-webhook test</p>
-      <label for="bot-name">Webhook-url:</label>
+      <label for="webhook-url">Webhook-url:</label>
       <br>
       <input id="webhook-url" type="text" placeholder="can be left empty since it'll automatically use the one in our chat">
       <hr>
       <label for="bot-name">Bot-name:</label>
       <br>
       <input id="bot-name" type="text" placeholder="can be left empty for standard name">
+      <hr>
+      <label for="bot-avatar">Bot-avatar:</label>
+      <br>
+      <input id="bot-avatar" type="text" placeholder="can be left empty for yami avatar. Example: https://i.imgur.com/rwEF8Tt.png">
       <hr>
       <label for="content-message">Message:</label>
       <textarea id="content-message" type="text" placeholder="If you leave this empty, the standard message [the god throws lightning at the heretic!] will be sent. To mention roles, type <@&roleid>, and to mention a user, type <@userid>."></textarea>
@@ -31,12 +35,18 @@
     function sendMessage() {
       var webhookurl = document.getElementById('webhook-url').value;
       var name = document.getElementById('bot-name').value;
+      var botPicture = document.getElementById('bot-avatar').value;
       var messageInput = document.getElementById('content-message');
       var message = messageInput.value;
+      
       messageInput.value = "";
 
       if(webhookurl == ""){
         webhookurl = "https://discord.com/api/webhooks/794331581350281247/pRugo_IbhfneqMX-tZE2rZHHNgaTQXXnfPZBirvFbkHOJ11IZZ4Q0Rrw-V8yCen-nxyb";
+      }
+
+      if(botPicture == ""){
+        botPicture = "https://i.imgur.com/rwEF8Tt.png";
       }
       var request = new XMLHttpRequest();
       request.open("POST", webhookurl);
@@ -54,7 +64,7 @@
       }
     var params = {
         username: name,
-        avatar_url: "https://i.imgur.com/rwEF8Tt.png",
+        avatar_url: botPicture,
         content: message
     }
 
