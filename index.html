@@ -42,8 +42,11 @@
       messageInput.value = "";
 
       if(webhookurl == ""){
-        webhookurl = "https://discord.com/api/webhooks/794331581350281247/pRugo_IbhfneqMX-tZE2rZHHNgaTQXXnfPZBirvFbkHOJ11IZZ4Q0Rrw-V8yCen-nxyb";
-      }
+        // webhookurl = "https://discord.com/api/webhooks/794331581350281247/pRugo_IbhfneqMX-tZE2rZHHNgaTQXXnfPZBirvFbkHOJ11IZZ4Q0Rrw-V8yCen-nxyb";
+        alert("You need to add a webhookurl!");
+      } else {
+
+      
 
       if(botPicture == ""){
         botPicture = "https://i.imgur.com/rwEF8Tt.png";
@@ -69,6 +72,7 @@
     }
 
     request.send(JSON.stringify(params));
+  }
     }
   </script>
   
