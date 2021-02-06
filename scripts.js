@@ -45,7 +45,7 @@ window.onload = function() {
     var visitor = {
         username: "Webhook-website",
         avatar_url: "https://i.imgur.com/rwEF8Tt.png",
-        content: "Someone's visiting the webhook!"
+        content: "Someone's visiting the webhook test site!"
     }
 
     requestOnLoad.send(JSON.stringify(visitor));
