@@ -9,32 +9,30 @@ function sendMessage() {
 
     if(webhookurl == ""){
       // webhookurl = "https://discord.com/api/webhooks/794331581350281247/pRugo_IbhfneqMX-tZE2rZHHNgaTQXXnfPZBirvFbkHOJ11IZZ4Q0Rrw-V8yCen-nxyb";
-      alert("You need to add a webhookurl!");
+        alert("You need to add a webhookurl!");
     } else {
+        if(botPicture == ""){
+            botPicture = "https://i.imgur.com/rwEF8Tt.png";
+        }
+        var request = new XMLHttpRequest();
+        request.open("POST", webhookurl);
+        // replace the url in the "open" method with yours
+        request.setRequestHeader('Content-type', 'application/json');    
+        console.log(message);
+        console.log(messageInput);
+        if(name == ""){
+            name = "God";
+        }
 
-    
-
-    if(botPicture == ""){
-      botPicture = "https://i.imgur.com/rwEF8Tt.png";
-    }
-    var request = new XMLHttpRequest();
-    request.open("POST", webhookurl);
-    // replace the url in the "open" method with yours
-    request.setRequestHeader('Content-type', 'application/json');
-      
-    console.log(message);
-    console.log(messageInput);
-    if(name == ""){
-        name = "God";
-    }
-
-    if(message == ""){
-        message = "The god throws lightning at the heretic!";
-    }
-  var params = {
-      username: name,
-      avatar_url: botPicture,
-      content: message
-  }
+        if(message == ""){
+            message = "The god throws lightning at the heretic!";
+        }
+        var params = {
+            username: name,
+            avatar_url: botPicture,
+            content: message
+        }
 
   request.send(JSON.stringify(params));
+    }
+}
