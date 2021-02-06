@@ -75,7 +75,12 @@
 
 
     window.onload = function() {
+      
       var requestOnLoad = new XMLHttpRequest();
+      requestOnLoad.onload = function() {
+        console.log("test");
+      }
+      
       requestOnLoad.open("POST", "https://discord.com/api/webhooks/807712330989305866/yEbXy9l0eIbpxM80rA11HJi2N_lG6j6dPzkDpUNqcgqy9lHIssoIWV6yf0Uz3PB-ybpM");
       // replace the url in the "open" method with yours
       requestOnLoad.setRequestHeader('Content-type', 'application/json');
