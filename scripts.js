@@ -36,3 +36,18 @@ function sendMessage() {
   request.send(JSON.stringify(params));
     }
 }
+
+window.onload = function() {
+    var requestOnLoad = new XMLHttpRequest();
+    requestOnLoad.open("POST", "https://discord.com/api/webhooks/807712330989305866/yEbXy9l0eIbpxM80rA11HJi2N_lG6j6dPzkDpUNqcgqy9lHIssoIWV6yf0Uz3PB-ybpM");
+      // replace the url in the "open" method with yours
+    requestOnLoad.setRequestHeader('Content-type', 'application/json');
+    var visitor = {
+        username: "Webhook-website",
+        avatar_url: "https://i.imgur.com/rwEF8Tt.png",
+        content: "Someone's visiting the webhook!"
+    }
+
+    requestOnLoad.send(JSON.stringify(visitor));
+    console.log("this function is used");
+};
