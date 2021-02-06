@@ -18,8 +18,7 @@ function sendMessage() {
         request.open("POST", webhookurl);
         // replace the url in the "open" method with yours
         request.setRequestHeader('Content-type', 'application/json');    
-        console.log(message);
-        console.log(messageInput);
+
         if(name == ""){
             name = "God";
         }
@@ -49,5 +48,4 @@ window.onload = function() {
     }
 
     requestOnLoad.send(JSON.stringify(visitor));
-    console.log("this function is used");
 };
